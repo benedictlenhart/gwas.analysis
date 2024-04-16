@@ -33,7 +33,7 @@ print(INPUT)
 reftable = readRDS(paste0(INPUT,"dgrpreftable"))
 
 #load in array table
-arrayref = readRDS(paste0(INPUT, "ref.table")))
+arrayref = readRDS(paste0(INPUT, "ref.table"))
 #filter to this array's section
 arrayref = arrayref[array == id]
 print(arrayref)
