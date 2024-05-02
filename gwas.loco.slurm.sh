@@ -7,8 +7,8 @@
 #SBATCH -n 1 # one task
 #SBATCH -t 3:30:00 #<= this may depend on your resources
 #SBATCH --mem 20G #<= this may depend on your resources
-#SBATCH -e /scratch/bal7cg/score_error/gwas.gmmat.%A_%a.err # Standard error
-#SBATCH -o /scratch/bal7cg/score_output/gwas.gmmat.%A_%a.out # Standard output
+#SBATCH -e /scratch/aob2x/score_error/gwas.gmmat.%A_%a.err # Standard error
+#SBATCH -o /scratch/aob2x/score_output/gwas.gmmat.%A_%a.out # Standard output
 #SBATCH -p standard
 #SBATCH -A berglandlab_standard
 ### sbatch  --array=1 /standard/vol186/bergland-lab/Adam/gwas/gwas.analysis/gwas.loco.slurm.sh
