@@ -11,10 +11,10 @@
 #SBATCH -o /scratch/aob2x/score_output/gwas.gmmat.%A_%a.out # Standard output
 #SBATCH -p standard
 #SBATCH -A berglandlab_standard
-### sbatch  --array=1 /standard/vol186/bergland-lab/Adam/gwas/gwas.analysis/gwas.loco.slurm.sh
+### sbatch  --array=2-9760 /standard/vol186/bergland-lab/Adam/gwas/gwas.analysis/gwas.loco.slurm.sh
 ### cat /scratch/aob2x/score_error/gwas.gmmat.
 ###9760 tasks tasks
-### sacct -j 60223545
+### sacct -j 60876024
 
 
 module load gcc/11.4
