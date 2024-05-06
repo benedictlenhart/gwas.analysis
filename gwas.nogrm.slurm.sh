@@ -14,7 +14,7 @@
 ### sbatch  --array=1-9760 /standard/vol186/bergland-lab/Adam/gwas/gwas.analysis/gwas.nogrm.slurm.sh
 ### cat /scratch/aob2x/score_error/gwas.gmmat.60239084_1.err
 ###9760 tasks tasks
-### sacct -j 60240127
+### sacct -j 60922474
 
 
 module load gcc/11.4

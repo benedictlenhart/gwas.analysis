@@ -83,8 +83,15 @@ out = foreach(f = as.vector(arrayref[[1]]), .errorhandling = "remove") %do% {
     ingds = paste0(INPUT,c,".gds")
     modelqtl <- glmmkin(fixed = avg ~ WolbachiaStatus_NA, data = dt, kins = grm, id = "ral_id2",family = gaussian(link = "identity"))
 
+    if(!file.exists(paste(INPUT,"permlocoGWAS/perm", f, sep=""))) {
+      message("making directory")
+      dir.create(paste(INPUT,"permlocoGWAS/perm", f, sep=""))
+    } else {
+      message("directory exists")
+    }
+
     outputs = paste(INPUT ,
-                    "permlocoGWAS/",
+                    "permlocoGWAS/perm", f, "/",
                     f,"-",pheno.id,"_",c, ".txt",
                     sep = "")
     glmm.score(modelqtl, infile = ingds, outfile = outputs, MAF.range = c(0.05,0.95), miss.cutoff = 0.15, ncores = numCores ,
